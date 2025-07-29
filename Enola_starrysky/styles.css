@@ -1,0 +1,68 @@
+body {
+    background-image: url("sky.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    text-align: center;
+}
+
+
+img {
+    width: 240px;
+    margin: 30px;
+    border-radius: 12px;
+    padding: 10px;
+}
+
+
+.translate {
+    margin-left: 10vw;
+    animation: moveTranslate 10s infinite alternate ease-in-out;
+}
+@keyframes moveTranslate {
+    0%   { transform: translate(0px, 0px); }
+    25%  { transform: translate(300px, 100px); }
+    50%  { transform: translate(600px, -50px); }
+    75%  { transform: translate(300px, 100px); }
+    100% { transform: translate(0px, 0px); }
+}
+
+
+.rotate {
+    animation: rotateImage 6s infinite linear;
+}
+@keyframes rotateImage {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(720deg); }
+}
+
+
+.scale {
+    animation: scaleImage 2.5s infinite alternate ease-in-out;
+}
+@keyframes scaleImage {
+    0%   { transform: scaleX(1) scaleY(1); }
+    100% { transform: scaleX(2.2) scaleY(0.4); }
+}
+
+
+.skew {
+    animation: skewImage 2.5s infinite alternate ease-in-out;
+}
+@keyframes skewImage {
+    0%   { transform: skewX(0deg) skewY(0deg); }
+    100% { transform: skewX(45deg) skewY(25deg); }
+}
+
+
+.matrix {
+    animation: matrixImage 3s infinite alternate ease-in-out;
+}
+@keyframes matrixImage {
+    0% {
+        transform: matrix(1, 0, 0, 1, 0, 0); 
+    }
+    100% {
+        transform: matrix(1.8, 0.5, 0.5, 1.8, 80, 60); 
+    }
+}
